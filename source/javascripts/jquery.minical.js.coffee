@@ -311,7 +311,7 @@ minical =
       @$el
         .on("focus.minical click.minical", => @$cal.trigger('show.minical'))
         .on("hide.minical", $.proxy(@hideCalendar, @))
-        .on("keydown.minical", (e) -> mc.preventKeystroke.call(mc, e))
+        .on("keydown.minical", (e) -> !mc.preventKeystroke.call(mc, e))
       @$cal
         .on("hide.minical", $.proxy(@hideCalendar, @))
         .on("show.minical", $.proxy(@showCalendar, @))
